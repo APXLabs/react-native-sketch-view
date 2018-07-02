@@ -1,13 +1,13 @@
 
-import React, { PropTypes, Component } from 'react';
-import { 
-  requireNativeComponent, 
+import React, { Component } from 'react';
+import {
+  requireNativeComponent,
   View,
   UIManager,
   findNodeHandle,
   DeviceEventEmitter,
   ViewPropTypes,
-  ColorPropType 
+  ColorPropType
 } from 'react-native';
 
 const viewPropTypes = ViewPropTypes || View.propTypes;
@@ -97,10 +97,10 @@ SketchView.constants = {
 
 SketchView.propTypes = {
   ...viewPropTypes, // include the default view properties
-  selectedTool: PropTypes.number,
+  // selectedTool: PropTypes.number,
   toolColor: ColorPropType,
-  toolThickness: PropTypes.number,
-  localSourceImagePath: PropTypes.string
+  // toolThickness: PropTypes.number,
+  // localSourceImagePath: PropTypes.string
 };
 
 let RNSketchView = requireNativeComponent('RNSketchView', SketchView, {
