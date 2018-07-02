@@ -2,15 +2,10 @@
 import React, { Component } from 'react';
 import {
   requireNativeComponent,
-  View,
   UIManager,
   findNodeHandle,
   DeviceEventEmitter,
-  ViewPropTypes,
-  ColorPropType
 } from 'react-native';
-
-const viewPropTypes = ViewPropTypes || View.propTypes;
 
 class SketchView extends Component {
   constructor(props) {
@@ -93,14 +88,6 @@ SketchView.constants = {
       name: 'Eraser'
     }
   }
-};
-
-SketchView.propTypes = {
-  ...viewPropTypes, // include the default view properties
-  // selectedTool: PropTypes.number,
-  toolColor: ColorPropType,
-  // toolThickness: PropTypes.number,
-  // localSourceImagePath: PropTypes.string
 };
 
 let RNSketchView = requireNativeComponent('RNSketchView', SketchView, {
